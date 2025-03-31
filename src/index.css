@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@config "./tailwind.config.js";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .qubit {
+    @apply relative inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#6D28D9] text-white font-bold shadow-lg;
+  }
+  
+  .quantum-gate {
+    @apply px-3 py-2 bg-[#4C1D95] text-white rounded-md shadow-md hover:shadow-lg transition-all;
+  }
+  
+  .quantum-wire {
+    @apply h-1 bg-[#C4B5FD] rounded-full shadow;
+  }
+}
+
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: scale(1.05);
+  }
+}
+
+.animate-quantum-spin {
+  animation: spin 2s linear infinite;
+}
+
+.animate-quantum-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}

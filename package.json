@@ -1,0 +1,54 @@
+{
+  "name": "reactqbit",
+  "version": "0.1.0",
+  "description": "Quantum computing circuits with React JSX",
+  "author": "Djoudi Mansouri",
+  "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsup",
+    "prepare": "npm run build",
+    "release": "np",
+    "lint": "eslint src --ext ts,tsx",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.0.17",
+    "react": "^19.0.0",
+    "react-dom": "^19.1.0",
+    "tailwindcss": "^4.0.17",
+    "tsup": "^8.4.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.21.0",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "eslint": "^9.21.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-react-refresh": "^0.4.19",
+    "globals": "^15.15.0",
+    "np": "^10.2.0",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.24.1",
+    "vite": "^6.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DjoudiMansouri/React-QBit.git"
+  },
+  "keywords": [
+    "react",
+    "quantum",
+    "quantum-computing",
+    "jsx",
+    "react-component"
+  ]
+}
