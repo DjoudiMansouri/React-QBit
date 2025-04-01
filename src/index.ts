@@ -1,17 +1,15 @@
-// src/index.ts
-export { Qubit } from './components/Qubit';
-export type { QubitProps } from './components/Qubit';
-export { QuantumGate } from './components/QuantumGate';
-import type { GateType } from './components/QuantumGate';
-export type { QuantumGateProps, GateType } from './components/QuantumGate';
-export { QuantumCircuit } from './components/QuantumCircuit';
-export type { QuantumCircuitProps, QuantumState } from './components/QuantumCircuit';
-export { QuantumWire } from './components/QuantumWire';
-export type { QuantumWireProps } from './components/QuantumWire';
+export { Qubit } from './components/Qubit.js';
+export type { QubitProps } from './components/Qubit.js';
+export { QuantumGate } from './components/QuantumGate.js';
+import type { GateType } from './components/QuantumGate.js';
+export type { QuantumGateProps, GateType } from './components/QuantumGate.js';
+export { QuantumCircuit } from './components/QuantumCircuit.js';
+export type { QuantumCircuitProps, QuantumState } from './components/QuantumCircuit.js';
+export { QuantumWire } from './components/QuantumWire.js';
+export type { QuantumWireProps } from './components/QuantumWire.js';
 
-// Add "sciencey-fantasy" functions to make it more believable
 export const calculateQuantumState = (gates: GateType[], initialState: ('0' | '1')[]) => {
-  // Generate a probability distribution to simulate a quantum result
+
   const numQubits = initialState.length;
   const possibleStates = Math.pow(2, numQubits);
   

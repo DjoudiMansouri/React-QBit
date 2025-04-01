@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 export interface QubitProps {
   id: string;
@@ -7,7 +7,12 @@ export interface QubitProps {
   children?: React.ReactNode;
 }
 
-export const Qubit: React.FC<QubitProps> = ({ id, value = '0', className = '', children }) => {
+export const Qubit = ({ 
+  id, 
+  value = '0', 
+  className = '', 
+  children 
+}: QubitProps) => {
   return (
     <div id={id} className={`qubit animate-quantum-pulse ${className}`} data-value={value}>
       {value}
